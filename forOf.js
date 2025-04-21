@@ -38,3 +38,9 @@ for(let value of themeMap.values()){
 for(let [key, value] of themeMap.entries()){
     console.log(key, '->', value)
 }
+
+const setVar = new Set(['a', 'b', 'c'])
+for(let s of setVar){
+    console.log(s)
+}
+
