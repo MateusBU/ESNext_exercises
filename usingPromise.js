@@ -39,3 +39,5 @@ Promise.all([getClass('A'), getClass('B'), getClass('C')])
     .then(classes => [].concat(...classes)) //every element in one array
     .then(students => students.map(student => student.nome))
     .then(x => console.log(x))
+
+getClass('D').catch(error => console.log(error.message))
