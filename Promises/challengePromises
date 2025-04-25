@@ -1,0 +1,19 @@
+const fs = require('fs')
+const path = __dirname + '/challenge.txt'
+
+console.log(path)
+
+function getFileContent(path){
+    return new Promise((resolve, reject) => {
+        fs.readFile(path, 'utf8', (err, data)=>{
+            if(err) 
+                reject(err)
+            else
+                resolve(data)
+        })
+    })
+}
+
+getFileContent(path)
+    .then(console.log)
+    .catch(console.log)
